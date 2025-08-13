@@ -1,0 +1,58 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  * {
+    /* Removed the invalid border-border class */
+  }
+  
+  body {
+    @apply bg-robotic-black text-white font-roboto;
+    overflow-x: hidden;
+  }
+  
+  html {
+    scroll-behavior: smooth;
+  }
+}
+
+@layer components {
+  .gradient-text {
+    @apply bg-gradient-to-r from-robotic-yellow to-robotic-yellow-dark bg-clip-text text-transparent;
+  }
+  
+  .robotic-border {
+    @apply border border-robotic-yellow/30;
+  }
+  
+  .robotic-card {
+    @apply bg-robotic-gray/50 backdrop-blur-sm border border-robotic-yellow/20 rounded-lg p-6 hover:border-robotic-yellow/40 transition-all duration-300;
+  }
+  
+  .robotic-button {
+    @apply px-6 py-3 bg-robotic-yellow text-robotic-black font-semibold rounded-lg hover:bg-robotic-yellow-dark transition-all duration-300 transform hover:scale-105;
+  }
+  
+  .robotic-button-outline {
+    @apply px-6 py-3 border-2 border-robotic-yellow text-robotic-yellow font-semibold rounded-lg hover:bg-robotic-yellow hover:text-robotic-black transition-all duration-300 transform hover:scale-105;
+  }
+}
+
+/* Custom scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: #1A1A1A;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #FFD700;
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #FFC000;
+}
